@@ -21,12 +21,14 @@ jobs:
     steps:
       - name: Setup repo
       - uses: actions/checkout@v2
+
+      -name: teste
       - uses: actions/setup-node@v1
         with:
           node-version: '14.15.3'
-        
+
       - name: Reack Install Dependencies
         run: yarn
-        
+
       - name: Build
         run: yarn build;
