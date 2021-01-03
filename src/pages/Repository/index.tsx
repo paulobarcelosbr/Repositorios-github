@@ -57,7 +57,6 @@ const Repository: React.FC = () => {
           Voltar
         </Link>
       </Header>
-      teste
       {repository && (
         <RepositoryInfo>
           <header>

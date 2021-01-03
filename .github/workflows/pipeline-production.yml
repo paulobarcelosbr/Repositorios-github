@@ -22,12 +22,12 @@ jobs:
 
       - uses: c-hive/gha-yarn-cache@v1
 
-      - name: intall Dependence
+      - name: intall node
         uses: actions/setup-node@v1
         with:
           node-version: 12
 
-      - name: Install JS dependencies
+      - name: Install dependencies
         run: yarn install
 
       - name: Check Lint
