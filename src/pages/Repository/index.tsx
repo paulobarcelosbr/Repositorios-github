@@ -57,6 +57,7 @@ const Repository: React.FC = () => {
           Voltar
         </Link>
       </Header>
+      teste
       {repository && (
         <RepositoryInfo>
           <header>
@@ -85,7 +86,6 @@ const Repository: React.FC = () => {
           </ul>
         </RepositoryInfo>
       )}
-
       <Issues>
         {issues.map(issue => (
           <a href={issue.html_url} key={issue.id}>
