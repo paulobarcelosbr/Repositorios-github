@@ -38,6 +38,8 @@ const Repository: React.FC = () => {
 
   const { params } = useRouteMatch<RepositoryParams>();
 
+  const x = 1 + 2;
+
   useEffect(() => {
     api.get(`repos/${params.repository}`).then(response => {
       setRepository(response.data);
@@ -57,7 +59,7 @@ const Repository: React.FC = () => {
           Voltar
         </Link>
       </Header>
-
+      {x}
       {repository && (
         <RepositoryInfo>
           <header>
