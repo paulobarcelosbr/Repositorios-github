@@ -22,11 +22,12 @@ jobs:
       - name: Setup repo
         uses: actions/checkout@v2
 
+        uses: c-hive/gha-yarn-cache@v1
+
       - name: intall Dependence
         uses: actions/setup-node@v1
         with:
           node-version: 12
-        uses: c-hive/gha-yarn-cache@v1
 
       - name: Install dependencies
         run: yarn install
