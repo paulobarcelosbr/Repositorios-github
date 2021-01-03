@@ -15,25 +15,35 @@ on:
     branches: [master]
 
 jobs:
-  pipeline-production:
-    runs-on: ubuntu-latest # runs a test on Ubuntu, Windows and macOS
-
+  lint:
+    runs-on: ubuntu-latest
     steps:
-      - name: Setup repo
-        - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
 
-        - uses: c-hive/gha-yarn-cache@v1
+      - uses: c-hive/gha-yarn-cache@v1
 
-      - name: intall Dependence
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: Install dependencies
+      - name: Install JS dependencies
         run: yarn install
+# jobs:
+#   pipeline-production:
+#     runs-on: ubuntu-latest # runs a test on Ubuntu, Windows and macOS
 
-      - name: Check Lint
-        run: yarn lint
+#     steps:
+#       - name: Setup repo
+#         - uses: actions/checkout@v2
 
-      - name: Check Build
-        run: yarn build;
+#         - uses: c-hive/gha-yarn-cache@v1
+
+#       - name: intall Dependence
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: 12
+
+#       - name: Install dependencies
+#         run: yarn install
+
+#       - name: Check Lint
+#         run: yarn lint
+
+#       - name: Check Build
+#         run: yarn build;
