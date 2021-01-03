@@ -15,20 +15,23 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  pipeline-production:
     runs-on: ubuntu-latest # runs a test on Ubuntu, Windows and macOS
 
     steps:
       - name: Setup repo
         uses: actions/checkout@v2
 
-      - name: teste
+      - name: intall node
         uses: actions/setup-node@v1
         with:
           node-version: 12
 
-      - name: Reack Install Dependencies
+      - name: Install Dependencies
         run: yarn
 
-      - name: Build
+      - name: Check Lint
+        run: yarn lint
+
+      - name: Check Build
         run: yarn build;
