@@ -30,8 +30,5 @@ jobs:
       - name: Reack Install Dependencies
         run: yarn
 
-      - name: teste Prettier
-        run: node_modules/prettier/bin-prettier.js --check "./functions/src/**/*.{ts,tsx,js,jsx,css,scss,json}"
-
       - name: Build
         run: yarn build;
