@@ -20,9 +20,9 @@ jobs:
 
     steps:
       - name: Setup repo
-        uses: actions/checkout@v2
+        - uses: actions/checkout@v2
 
-        uses: c-hive/gha-yarn-cache@v1
+        - uses: c-hive/gha-yarn-cache@v1
 
       - name: intall Dependence
         uses: actions/setup-node@v1
